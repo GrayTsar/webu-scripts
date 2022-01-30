@@ -1,9 +1,17 @@
 {
     "scripts": [
         {
-            "name": "boxnovel.com",
+            "name": "BoxNovel",
             "fileName": "boxnovel.lua",
-            "imgUrl": "https://github.com/",
+            "imgUrl": "https://github.com/GrayTsar/webu-scripts/blob/master/icons/boxnovelcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "hash": ""
+        },
+        {
+            "name": "NovelFull",
+            "fileName": "novelfull.lua",
+            "imgUrl": "https://github.com/GrayTsar/webu-scripts/blob/master/icons/novelfullcom.png",
             "lang": "en",
             "versionCode": 1,
             "hash": ""
