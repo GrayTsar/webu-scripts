@@ -1,0 +1,12 @@
+{
+    "scripts": [
+        {
+            "name": "boxnovel.com",
+            "fileName": "boxnovel.lua",
+            "imgUrl": "https://github.com/",
+            "lang": "en",
+            "versionCode": 1,
+            "hash": ""
+        }
+    ]
+}
