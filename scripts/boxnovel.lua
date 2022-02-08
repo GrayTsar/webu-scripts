@@ -66,7 +66,6 @@ function parseNovel(url)
 		end
 	end
 	
-
 	lib:reverseList(list)
 	websiteNovel:setChapters(list)
 	
