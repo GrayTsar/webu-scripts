@@ -13,8 +13,6 @@ function getChapterText(url)
 	local document = lib:getDocument(url)
 	local textDocument = document:selectFirst(chapterTextElement):select('p')
 
-	lib:removeFirst(textDocument)
-
 	local text = textDocument:toString()
 	return text
 end
