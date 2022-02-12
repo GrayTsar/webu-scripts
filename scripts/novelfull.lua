@@ -12,9 +12,9 @@ local chapterTextElement = 'div#chapter-content'
 
 function getChapterText(url) 
 	local document = lib:getDocument(url)
-	local textDocument = document:selectFirst(chapterTextElement)
-	
-	local text = textDocument:text()
+	local textDocument = document:selectFirst(chapterTextElement):select('p')
+
+	local text = textDocument:toString()
 	return text
 end
 
