@@ -9,14 +9,10 @@ local chapterListElement = ''
 --local searchNovelsElement = ''
 local chapterTextElement = 'div#chapter-content'
 
-
 function getChapterText(url)
 	local document = lib:getDocument(url)
 	local textDocument = document:selectFirst(chapterTextElement):select('p')
 
-	lib:removeFirst(textDocument)
-	lib:removeFirst(textDocument)
-	lib:removeFirst(textDocument)
 	lib:removeFirst(textDocument)
 
 	local text = textDocument:toString()
