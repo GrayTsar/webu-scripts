@@ -26,7 +26,6 @@ end
 function search(searchQuery)
 	local url = 'https://novelfull.com/search?keyword=' .. searchQuery
 	local document = lib:getDocument(url)
-
 	local documentSearchResult = document:selectFirst('#list-page'):selectFirst('div.list'):select('div.row')
 
 	local list = lib:createWebsiteSearchList()
@@ -49,7 +48,6 @@ function parseNovel(url)
 	local documentNovel = lib:getDocument(url):select('div#truyen')
 	local websiteNovel = lib:createWebsiteNovel()
 
-
 	websiteNovel:setTitle(documentNovel:select('div.desc'):first():text())
 	websiteNovel:setImageUrl(documentNovel:select('div.book'):select('img'):first():absUrl('src'))
 	websiteNovel:setDescription(documentNovel:select('div.desc-text'):first():text())
@@ -68,9 +66,7 @@ function parseNovel(url)
 	docStatus:select('h3'):remove()
 	websiteNovel:setStatus(docStatus:text())
 
-
 	local list = lib:createWebsiteChapterList()
-
 
 	local hasNext = 1
 	while hasNext==1 do
@@ -83,9 +79,7 @@ function parseNovel(url)
 			lib:addWebsiteChaptersToList(list, link, title, '')
 		end
 
-
 		local nextPage = ''
-
 		local nextPageingElement = documentNovel:select('ul.pagination.pagination-sm'):first()
 
 		if nextPageingElement == nil then
@@ -105,7 +99,6 @@ function parseNovel(url)
 			hasNext = 0
 		end
 	end
-
 
 	websiteNovel:setChapters(list)
 	return websiteNovel
