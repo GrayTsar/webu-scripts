@@ -15,8 +15,6 @@ function getChapterText(url)
 	local document = lib:getDocument(url)
 	local textDocument = document:selectFirst(chapterTextElement):selectFirst('div.text-left'):select('p')
 
-	lib:removeFirst(textDocument)
-
 	return textDocument:toString()
 end
 
