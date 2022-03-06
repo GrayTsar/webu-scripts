@@ -7,6 +7,7 @@
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/boxnovelcom.png",
             "lang": "en",
             "versionCode": 1,
+            "versionLib": 1,
             "hash": ""
         },
         {
@@ -16,6 +17,37 @@
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/novelfullcom.png",
             "lang": "en",
             "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
+            "name": "ZinNovel",
+            "fileName": "zinnovel.lua",
+            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/zinnovel.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/zinnovelcom.jpg",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
+            "name": "LightNovelHeaven",
+            "fileName": "lightnovelheaven.lua",
+            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelheaven.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/lightnovelheavencom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
+            "name": "VipNovel",
+            "fileName": "vipnovel.lua",
+            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/vipnovel.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/vipnovelcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
             "hash": ""
         }
     ]
