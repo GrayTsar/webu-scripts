@@ -13,8 +13,8 @@ local ajaxChapterRelativeUrl = 'ajax/chapters/'
 
 function getChapterText(url) 
 	local document = lib:getDocument(url)
-	local text = document:selectFirst(chapterTextElement):selectFirst('div.text-left'):text()
-	
+	local text = document:selectFirst(chapterTextElement):selectFirst('div.text-left'):html()
+
 	return text
 end
 
@@ -22,9 +22,9 @@ function search(searchQuery)
 	local url = 'https://zinnovel.com/?s=' .. searchQuery .. '&post_type=wp-manga'
 	local document = lib:getDocument(url)
 	local documentSearchResult = document:select(searchNovelsElement)
-	
+
 	local list = lib:createWebsiteSearchList()
-	
+
 	local searchCount = documentSearchResult:size()
 	if(searchCount > 0) then
 		for i=0,searchCount-1,1 do
@@ -34,7 +34,7 @@ function search(searchQuery)
 			lib:addWebsiteSearchToList(list, link, title, imgSrc)
 		end
 	end
-	
+
 	return list
 end
 
@@ -56,10 +56,10 @@ function parseNovel(url)
 	--get chapters list from ajax request
 	local documentChapters = lib:postDocument(url .. ajaxChapterRelativeUrl)
 	local chaptersIndex = documentChapters:select(chapterListElement)
-	
+
 	local list = lib:createWebsiteChapterList()
 	local chaptersCount = chaptersIndex:size()
-	
+
 	if(chaptersCount > 0) then
 		for i=0,chaptersCount-1,1 do
 			local link = chaptersIndex:get(i):selectFirst('a[href]'):attr('abs:href')
@@ -67,9 +67,9 @@ function parseNovel(url)
 			lib:addWebsiteChaptersToList(list, link, title, '')
 		end
 	end
-	
+
 	lib:reverseList(list)
 	websiteNovel:setChapters(list)
-	
+
 	return websiteNovel
 end
