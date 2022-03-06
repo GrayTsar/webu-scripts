@@ -1,6 +1,16 @@
 {
     "scripts": [
         {
+            "name": "MtlNovel",
+            "fileName": "mtlnovel.lua",
+            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/mtlnovel.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/mtlnovelcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
             "name": "BoxNovel",
             "fileName": "boxnovel.lua",
             "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/boxnovel.lua",
