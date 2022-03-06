@@ -13,7 +13,7 @@ local ajaxChapterRelativeUrl = 'ajax/chapters/'
 
 function getChapterText(url) 
 	local document = lib:getDocument(url)
-	local text = document:selectFirst(chapterTextElement):selectFirst('div.text-left'):html()
+	local text = document:selectFirst(chapterTextElement):selectFirst('div.text-left'):toString()
 
 	return text
 end

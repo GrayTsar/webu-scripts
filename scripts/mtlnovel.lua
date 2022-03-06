@@ -11,7 +11,7 @@ function getChapterText(url)
 	local document = lib:getDocument(url)
 	local textDocument = document:selectFirst(chapterTextElement):select('p')
 
-	return textDocument:html()
+	return textDocument:toString()
 end
 
 function search(searchQuery)
