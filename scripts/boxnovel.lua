@@ -5,6 +5,7 @@ local novelAuthorElement = 'div.author-content'
 local novelGenresElement = 'div.genres-content'
 local novelTagsElement = 'div.tags-content'
 local novelStatusElement = 'div.post-status'
+local novelStatusContentElement = 'div.summary-content'
 local chapterListElement = 'li.wp-manga-chapter'
 local searchNovelsElement = 'div.c-tabs-item__content'
 local chapterTextElement = 'div.c-blog-post'
@@ -49,7 +50,12 @@ function parseNovel(url)
 	websiteNovel:setAuthor(documentNovel:selectFirst(novelAuthorElement):text())
 	websiteNovel:setGenres(documentNovel:selectFirst(novelGenresElement):text())
 	websiteNovel:setTags(documentNovel:selectFirst(novelTagsElement):text())
-	websiteNovel:setStatus(documentNovel:selectFirst(novelStatusElement):selectFirst('div.summary-content'):text())
+
+	if documentNovel:selectFirst(novelStatusElement):select(novelStatusContentElement):last() == nil then
+		websiteNovel:setStatus(documentNovel:selectFirst(novelStatusElement):selectFirst(novelStatusContentElement):text())
+	else
+		websiteNovel:setStatus(documentNovel:selectFirst(novelStatusElement):select(novelStatusContentElement):last():text())
+	end
 
 	--get chapters list from ajax request
 	local documentChapters = lib:postDocument(url .. ajaxChapterRelativeUrl)
