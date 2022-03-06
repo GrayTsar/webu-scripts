@@ -30,8 +30,8 @@ function search(searchQuery)
         for i=0,size-1,1 do
             local element = array:get(i)
             local searchResult = lib:elementAsObject(element)
-            local link2 = lib:replaceString(searchResult:get('title'), '</strong>', '')
-			local title2 = searchResult:get('permalink')
+            local link2 = searchResult:get('permalink')
+			local title2 = lib:replaceString(searchResult:get('title'), '</strong>', '')
 			local imgSrc2 = searchResult:get('thumbnail')
 
             local link = lib:replaceString(link2, '"', '')
