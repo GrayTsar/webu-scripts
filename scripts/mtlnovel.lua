@@ -5,11 +5,7 @@ local novelAuthorElement = 'td#author'
 local novelGenresElement = 'td#genre'
 local novelTagsElement = 'td#tags'
 local novelStatusElement = 'td#status'
-local chapterListElement = 'li.wp-manga-chapter'
-local searchNovelsElement = 'div.c-tabs-item__content'
 local chapterTextElement = 'div.par.fontsize-16'
-
-local ajaxChapterRelativeUrl = 'ajax/chapters/'
 
 function getChapterText(url)
 	local document = lib:getDocument(url)
@@ -37,7 +33,7 @@ function search(searchQuery)
             local link2 = lib:replaceString(searchResult:get('title'), '</strong>', '')
 			local title2 = searchResult:get('permalink')
 			local imgSrc2 = searchResult:get('thumbnail')
-            
+
             local link = lib:replaceString(link2, '"', '')
             local title = lib:replaceString(title2, '"', '')
             local imgSrc = lib:replaceString(imgSrc2, '"', '')
