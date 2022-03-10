@@ -21,6 +21,16 @@
             "hash": ""
         },
         {
+            "name": "NovelFull",
+            "fileName": "novelfull.lua",
+            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/novelfull.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/novelfullcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
             "name": "BoxNovel",
             "fileName": "boxnovel.lua",
             "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/boxnovel.lua",
@@ -31,10 +41,10 @@
             "hash": ""
         },
         {
-            "name": "NovelFull",
+            "name": "ReadNovelFull",
             "fileName": "novelfull.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/novelfull.lua",
-            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/novelfullcom.png",
+            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/readnovelfull.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/readnovelfullcom.png",
             "lang": "en",
             "versionCode": 1,
             "versionLib": 1,
