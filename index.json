@@ -42,7 +42,7 @@
         },
         {
             "name": "ReadNovelFull",
-            "fileName": "novelfull.lua",
+            "fileName": "readnovelfull.lua",
             "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/readnovelfull.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/readnovelfullcom.png",
             "lang": "en",
