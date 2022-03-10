@@ -11,6 +11,16 @@
             "hash": ""
         },
         {
+            "name": "LightNovelPub",
+            "fileName": "lightnovelpub.lua",
+            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelpub.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/lightnovelpubcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
             "name": "BoxNovel",
             "fileName": "boxnovel.lua",
             "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/boxnovel.lua",
