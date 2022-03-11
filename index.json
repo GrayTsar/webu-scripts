@@ -1,9 +1,9 @@
 {
-    "scripts": [
+    "extensions": [
         {
             "name": "MtlNovel",
             "fileName": "mtlnovel.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/mtlnovel.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/mtlnovel.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/mtlnovelcom.png",
             "lang": "en",
             "versionCode": 1,
@@ -13,7 +13,7 @@
         {
             "name": "LightNovelPub",
             "fileName": "lightnovelpub.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelpub.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelpub.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/lightnovelpubcom.png",
             "lang": "en",
             "versionCode": 1,
@@ -23,7 +23,7 @@
         {
             "name": "NovelFull",
             "fileName": "novelfull.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/novelfull.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/novelfull.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/novelfullcom.png",
             "lang": "en",
             "versionCode": 1,
@@ -33,7 +33,7 @@
         {
             "name": "BoxNovel",
             "fileName": "boxnovel.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/boxnovel.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/boxnovel.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/boxnovelcom.png",
             "lang": "en",
             "versionCode": 1,
@@ -43,7 +43,7 @@
         {
             "name": "ReadNovelFull",
             "fileName": "readnovelfull.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/readnovelfull.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/readnovelfull.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/readnovelfullcom.png",
             "lang": "en",
             "versionCode": 1,
@@ -53,7 +53,7 @@
         {
             "name": "ZinNovel",
             "fileName": "zinnovel.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/zinnovel.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/zinnovel.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/zinnovelcom.jpg",
             "lang": "en",
             "versionCode": 1,
@@ -63,7 +63,7 @@
         {
             "name": "LightNovelHeaven",
             "fileName": "lightnovelheaven.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelheaven.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelheaven.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/lightnovelheavencom.png",
             "lang": "en",
             "versionCode": 1,
@@ -73,7 +73,7 @@
         {
             "name": "VipNovel",
             "fileName": "vipnovel.lua",
-            "scriptUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/vipnovel.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/vipnovel.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/vipnovelcom.png",
             "lang": "en",
             "versionCode": 1,
