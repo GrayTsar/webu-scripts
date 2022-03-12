@@ -36,8 +36,8 @@
             "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/boxnovel.lua",
             "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/boxnovelcom.png",
             "lang": "en",
-            "versionCode": 2,
-            "versionLib": 1,
+            "versionCode": 1,
+            "versionLib": 2,
             "hash": ""
         },
         {
