@@ -1,17 +1,3 @@
-local novelTitleElement = 'h1.novel-title.text2row'
-local novelImageUrlElement = 'div.fixed-img'
-local novelDescriptionElement = 'div.summary'
-local novelAuthorElement = 'span.author'
-local novelGenresElement = 'div.categories'
-local novelTagsElement = 'div.tags'
-local novelStatusElement = 'div.header-stats'
-local novelStatusContentElement = 'div.summary-content'
-local chapterListElement = 'li.wp-manga-chapter'
-local searchNovelsElement = 'div.c-tabs-item__content'
-local chapterTextElement = 'div.c-blog-post'
-
-local ajaxChapterRelativeUrl = 'ajax/chapters/'
-
 function getChapterText(url)
 	local document = lib:getDocument(url)
 	local textDocument = document:selectFirst('div#chapter-container'):select('p')
@@ -47,7 +33,7 @@ function parseNovel(url)
 	local documentNovel = lib:getDocument(url)
 	local websiteNovel = lib:createWebsiteNovel()
 
-	websiteNovel:setTitle(documentNovel:selectFirst(novelTitleElement):text())
+	websiteNovel:setTitle(documentNovel:selectFirst('h1.novel-title.text2row'):text())
 	websiteNovel:setImageUrl(documentNovel:selectFirst('div.fixed-img'):selectFirst('img'):attr('data-src'))
 	websiteNovel:setDescription(documentNovel:selectFirst('div.summary'):selectFirst('div.content'):text())
 	websiteNovel:setAuthor(documentNovel:selectFirst('div.author'):child(1):text())
