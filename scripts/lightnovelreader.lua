@@ -48,7 +48,7 @@ function parseNovel(url)
 	websiteNovel:setTags('')
 	websiteNovel:setStatus(documentNovel:selectFirst('div.novels-detail-right'):select('li'):get(1):child(1):text())
 
-    local listChapters = documentNovel:selectFirst('div.novels-detail-chapters'):select('li')
+    local listChapters = documentNovel:select('div.novels-detail-chapters'):select('li')
     local chaptersCount = listChapters:size()
     local list = lib:createWebsiteChapterList()
 

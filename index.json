@@ -31,6 +31,16 @@
             "hash": ""
         },
         {
+            "name": "LightNovelReader",
+            "fileName": "lightnovelreader.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelreader.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/lightnovelreader_org.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
             "name": "BoxNovel",
             "fileName": "boxnovel.lua",
             "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/boxnovel.lua",
