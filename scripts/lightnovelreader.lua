@@ -1,8 +1,8 @@
 function getChapterText(url)
 	local document = lib:getDocument(url)
-	local textDocument = document:selectFirst('div#chapterText'):select('p')
+	local textDocument = document:selectFirst('div#chapterText'):html()
 
-	return textDocument:toString()
+	return textDocument
 end
 
 function search(searchQuery)
@@ -48,14 +48,18 @@ function parseNovel(url)
 	websiteNovel:setTags('')
 	websiteNovel:setStatus(documentNovel:selectFirst('div.novels-detail-right'):select('li'):get(1):child(1):text())
 
-    local listChapters = documentNovel:select('div.novels-detail-chapters'):select('li')
-    local chaptersCount = listChapters:size()
+    local volumes = documentNovel:select('a.novels-detail-chapters-btn')
+    local volumesCount = volumes:size()
     local list = lib:createWebsiteChapterList()
 
-    for i=0,chaptersCount-1,1 do
-        local link = listChapters:get(i):selectFirst('a[href]'):attr('abs:href')
-        local title = listChapters:get(i):selectFirst('a[href]'):text()
-        lib:addWebsiteChaptersToList(list, link, title, '')
+    for i=0,volumesCount-1,1 do
+        local chapters = documentNovel:select('div.novels-detail-chapters'):get(i):select('li')
+        local chapterSize = chapters:size()
+        for j=0,chapterSize-1,1 do
+            local link = chapters:get(j):selectFirst('a[href]'):attr('abs:href')
+            local title = volumes:get(i):text() .. ' | ' .. chapters:get(j):selectFirst('a[href]'):text()
+            lib:addWebsiteChaptersToList(list, link, title, '')
+        end
     end
 
     lib:reverseList(list)
