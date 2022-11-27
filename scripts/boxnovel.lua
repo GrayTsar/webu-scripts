@@ -12,7 +12,7 @@ local chapterTextElement = 'div.c-blog-post'
 
 local ajaxChapterRelativeUrl = 'ajax/chapters/'
 
-function getChapterText(url) 
+function getChapterText(url)
 	local document = lib:getDocument(url)
 	local textDocument = document:selectFirst(chapterTextElement):selectFirst('div.text-left'):select('p')
 
@@ -31,7 +31,7 @@ function search(searchQuery)
 		for i=0,searchCount-1,1 do
 			local link = documentSearchResult:get(i):selectFirst('a[href]'):attr('abs:href')
 			local title = documentSearchResult:get(i):selectFirst('a[href]'):attr('title')
-			local imgSrc = documentSearchResult:get(i):selectFirst('img'):absUrl('src')
+			local imgSrc = documentSearchResult:get(i):selectFirst('img'):absUrl('data-src')
 			lib:addWebsiteSearchToList(list, link, title, imgSrc)
 		end
 	end
@@ -40,12 +40,12 @@ function search(searchQuery)
 end
 
 function parseNovel(url)
-	--get info from novels page
+	--[[get info from novels page--]]
 	local documentNovel = lib:getDocument(url)
 	local websiteNovel = lib:createWebsiteNovel()
 
 	websiteNovel:setTitle(documentNovel:selectFirst(novelTitleElement):text())
-	websiteNovel:setImageUrl(documentNovel:selectFirst(novelImageUrlElement):selectFirst('img'):absUrl('src'))
+	websiteNovel:setImageUrl(documentNovel:selectFirst(novelImageUrlElement):selectFirst('img'):absUrl('data-src'))
 	websiteNovel:setDescription(documentNovel:selectFirst(novelDescriptionElement):text())
 	websiteNovel:setAuthor(documentNovel:selectFirst(novelAuthorElement):text())
 	websiteNovel:setGenres(documentNovel:selectFirst(novelGenresElement):text())
@@ -57,7 +57,7 @@ function parseNovel(url)
 		websiteNovel:setStatus(documentNovel:selectFirst(novelStatusElement):select(novelStatusContentElement):last():text())
 	end
 
-	--get chapters list from ajax request
+	--[[get chapters list from ajax request]]
 	local documentChapters = lib:postDocument(url .. ajaxChapterRelativeUrl)
 	local chaptersIndex = documentChapters:select(chapterListElement)
 

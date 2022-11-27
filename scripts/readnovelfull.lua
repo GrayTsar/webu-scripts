@@ -6,7 +6,7 @@ function getChapterText(url)
 end
 
 function search(searchQuery)
-	local url = 'https://readnovelfull.com/search?keyword=' .. searchQuery
+	local url = 'https://readnovelfull.com/novel-list/search?keyword=' .. searchQuery
 	local document = lib:getDocument(url)
 	local documentSearchResult = document:selectFirst('div#list-page'):selectFirst('div.list'):select('div.row')
 
@@ -26,7 +26,7 @@ function search(searchQuery)
 end
 
 function parseNovel(url)
-	--get info from novels page
+	--[[get info from novels page--]]
 	local documentNovel = lib:getDocument(url)
 	local websiteNovel = lib:createWebsiteNovel()
 

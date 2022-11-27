@@ -1,7 +1,9 @@
 function getChapterText(url)
 	local document = lib:getDocument(url)
-	local textDocument = document:selectFirst('div#chapterText'):html()
+	local chapter = document:selectFirst('div#chapterText')
+    chapter:select('a,script,.hidden,style,form,span'):remove()
 
+    local textDocument = chapter:html()
 	return textDocument
 end
 
