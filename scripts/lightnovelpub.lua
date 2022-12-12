@@ -34,11 +34,26 @@ function parseNovel(url)
 	local websiteNovel = lib:createWebsiteNovel()
 
 	websiteNovel:setTitle(documentNovel:selectFirst('h1.novel-title.text2row'):text())
-	websiteNovel:setImageUrl(documentNovel:selectFirst('div.fixed-img'):selectFirst('img'):attr('data-src'))
+	websiteNovel:setImageUrl(documentNovel:selectFirst('div.fixed-img'):selectFirst('img'):attr('abs:data-src'))
 	websiteNovel:setDescription(documentNovel:selectFirst('div.summary'):selectFirst('div.content'):text())
 	websiteNovel:setAuthor(documentNovel:selectFirst('div.author'):child(1):text())
-	websiteNovel:setGenres(documentNovel:selectFirst('div.categories'):child(1):text())
-	websiteNovel:setTags(documentNovel:selectFirst('div.tags'):child(1):text())
+
+	local htmlGenre = documentNovel:selectFirst('div.categories'):child(1):children()
+	local genreSize = htmlGenre:size()
+	local genreTable = {}
+	for ig=0, genreSize-1,1 do
+		table.insert(genreTable, htmlGenre:get(ig):text())
+	end
+	websiteNovel:setGenres(table.concat(genreTable, ', '))
+
+	local htmlTags = documentNovel:selectFirst('div.tags'):select("li")
+	local tagsSize = htmlTags:size()
+	local tagsTable = {}
+	for it=0, tagsSize-1,1 do
+		table.insert(tagsTable, htmlTags:get(it):text())
+	end
+	websiteNovel:setTags(table.concat(tagsTable, ', '))
+
 	websiteNovel:setStatus(documentNovel:selectFirst('div.header-stats'):child(3):child(0):text())
 
     local urlChapters = documentNovel:selectFirst('.grdbtn.chapter-latest-container'):selectFirst('a[href]'):attr('abs:href')
