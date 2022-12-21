@@ -1,6 +1,16 @@
 {
     "extensions": [
         {
+            "name": "MtlNovel",
+            "fileName": "mtlnovel.lua",
+            "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/mtlnovel.lua",
+            "imgUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/icons/mtlnovelcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
+        },
+        {
             "name": "LightNovelPub",
             "fileName": "lightnovelpub.lua",
             "extensionUrl": "https://raw.githubusercontent.com/GrayTsar/webu-scripts/master/scripts/lightnovelpub.lua",
