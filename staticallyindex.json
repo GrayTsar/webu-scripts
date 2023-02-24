@@ -89,6 +89,16 @@
             "versionCode": 1,
             "versionLib": 1,
             "hash": ""
+        },
+        {
+            "name": "All Novel Full",
+            "fileName": "allnovelfull.lua",
+            "extensionUrl": "https://cdn.statically.io/gh/GrayTsar/webu-scripts/master/scripts/allnovelfull.lua",
+            "imgUrl": "https://cdn.statically.io/gh/GrayTsar/webu-scripts/master/icons/allnovelfullcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
         }
     ]
 }
