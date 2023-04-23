@@ -99,6 +99,16 @@
             "versionCode": 1,
             "versionLib": 1,
             "hash": ""
+        },
+        {
+            "name": "Panda Novel",
+            "fileName": "panda-novel.lua",
+            "extensionUrl": "https://cdn.statically.io/gh/GrayTsar/webu-scripts/master/scripts/panda-novel.lua",
+            "imgUrl": "https://cdn.statically.io/gh/GrayTsar/webu-scripts/master/icons/pandanovelcom.png",
+            "lang": "en",
+            "versionCode": 1,
+            "versionLib": 1,
+            "hash": ""
         }
     ]
 }
