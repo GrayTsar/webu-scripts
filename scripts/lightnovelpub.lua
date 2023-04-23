@@ -8,7 +8,8 @@ end
 function search(searchQuery)
     local tokenValue = lib:getDocument('https://www.lightnovelpub.com/search'):selectFirst('form#novelSearchForm'):child(1):attr('value')
     local body = lib:getFormBuilder():addFormDataPart('inputContent', searchQuery):build()
-    local request = lib:getRequestBuilder():url('https://www.lightnovelpub.com/lnsearchlive'):addHeader("accept", "*/*"):addHeader("content-length", "16"):addHeader("content-type", "application/x-www-form-urlencoded; charset=UTF-8"):addHeader("lnrequestverifytoken", tokenValue):addHeader("referer", "https://www.lightnovelpub.com/search"):post(body):build()
+    local request = lib:getRequestBuilder():url('https://www.lightnovelpub.com/lnsearchlive'):addHeader("accept", "*/*"):addHeader("content-length", "16")
+	:addHeader("content-type", "application/x-www-form-urlencoded; charset=UTF-8"):addHeader("lnrequestverifytoken", tokenValue):addHeader("referer", "https://www.lightnovelpub.com/search"):post(body):build()
     local result = lib:executeRequest(request, 'https://www.lightnovelpub.com')
     local decoded = lib:decodeUnicode(result:toString())
 

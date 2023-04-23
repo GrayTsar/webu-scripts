@@ -1,17 +1,6 @@
-local novelTitleElement = ''
-local novelImageUrlElement = 'div.book'
-local novelDescriptionElement = 'div.desc-text'
-local novelAuthorElement = 'div.info'
-local novelGenresElement = 'div.info'
---local novelTagsElement = ''
-local novelStatusElement = 'div.info'
-local chapterListElement = ''
---local searchNovelsElement = ''
-local chapterTextElement = 'div#chapter-content'
-
 function getChapterText(url)
 	local document = lib:getDocument(url)
-	local textDocument = document:selectFirst(chapterTextElement):select('p')
+	local textDocument = document:selectFirst('div#chapter-content'):select('p')
 
 	local text = textDocument:toString()
 	return text

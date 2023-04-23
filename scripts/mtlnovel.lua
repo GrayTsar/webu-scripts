@@ -46,7 +46,6 @@ function search(searchQuery)
 end
 
 function parseNovel(url)
-	--get info from novels page
 	local documentNovel = lib:getDocument(url)
 	local websiteNovel = lib:createWebsiteNovel()
 
@@ -58,7 +57,6 @@ function parseNovel(url)
 	websiteNovel:setTags(documentNovel:selectFirst(novelTagsElement):text())
 	websiteNovel:setStatus(documentNovel:selectFirst(novelStatusElement):text())
 
-	--get chapters list
     local chapterLink = documentNovel:selectFirst('a.view-all'):selectFirst('a[href]'):attr('abs:href')
     local documentChapters = lib:getDocument(chapterLink)
 	local chaptersIndex = documentChapters:selectFirst('div.ch-list'):select('p')
