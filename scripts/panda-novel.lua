@@ -1,8 +1,10 @@
 function getChapterText(url)
     local request = lib:getRequestBuilder():url(url):addHeader("referer", url):build()
     local result = lib:executeRequest(request, 'https://www.panda-novel.com')
-    local text = result:selectFirst('div#novelArticle2'):select('p')
-	return text:toString()
+    local textElements = result:selectFirst('div#novelArticle2')
+	local ads = textElements:getElementsByAttributeValueContaining("class", "novel-ins")
+	ads:remove()
+	return textElements:toString()
 end
 
 function search(searchQuery)
@@ -33,9 +35,14 @@ function parseNovel(url)
 	novel:setTitle(doc:selectFirst('div.novel-desc'):child(0):text())
 	novel:setImageUrl(doc:selectFirst('meta[property=og:image]'):attr("content"))
 	novel:setDescription(doc:selectFirst("div.synopsis-content"):select("p"):text())
-	novel:setAuthor(doc:selectFirst('div.novel-desc'):child(1):child(1):text())
+	novel:setAuthor(doc:selectFirst('div.novel-desc'):child(1):child(0):text())
 	novel:setGenres(doc:selectFirst('div.novel-labels'):children():textNodes():toString():gsub('[%[%]]', ''))
-	novel:setTags(doc:selectFirst('ul.tags-list'):children():eachText():toString():gsub('[%[%]]', ''))
+	local tagsDoc = doc:selectFirst('ul.tags-list')
+	if tagsDoc == nil then
+		novel:setTags('')
+	else
+		novel:setTags(doc:selectFirst('ul.tags-list'):children():eachText():toString():gsub('[%[%]]', ''))
+	end
 	novel:setStatus(doc:select('ul.novel-labs'):get(1):child(1):child(0):text())
 
 	local chapters = lib:createWebsiteChapterList()
